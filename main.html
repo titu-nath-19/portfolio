@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titu Nath - Mechanical Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-center mb-12 text-gray-800;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-900;
+        }
+        .hero-bg {
+            background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* KUET-inspired blue gradient */
+        }
+        .btn {
+            @apply px-6 py-3 rounded-lg font-semibold text-white transition-colors duration-300;
+        }
+        .btn-primary {
+            @apply bg-blue-600 hover:bg-blue-700;
+        }
+        .btn-secondary {
+            @apply bg-gray-600 hover:bg-gray-700;
+        }
+        .btn-gemini {
+            @apply bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white;
+        }
+        /* Custom scrollbar for a more modern look (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        #geminiProjectIdeasContainer ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #geminiProjectIdeasContainer li {
+            @apply bg-gray-50 p-4 rounded-lg mb-3 shadow;
+        }
+        #geminiProjectIdeasContainer h4 {
+            @apply font-semibold text-lg text-blue-700 mb-1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-700">
+
+    <nav class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-blue-600">Titu Nath</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#experience" class="nav-link">Experience</a>
+                        <a href="#education" class="nav-link">Education</a>
+                        <a href="#certifications" class="nav-link">Certifications</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg class="h-6 w-6 hidden" id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block nav-link">About</a>
+                <a href="#projects" class="block nav-link">Projects</a>
+                <a href="#skills" class="block nav-link">Skills</a>
+                <a href="#experience" class="block nav-link">Experience</a>
+                <a href="#education" class="block nav-link">Education</a>
+                <a href="#certifications" class="block nav-link">Certifications</a>
+                <a href="#contact" class="block nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="hero-bg text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <img src="https://placehold.co/150x150/FFFFFF/333333?text=Titu+Nath" alt="Titu Nath" class="w-40 h-40 mx-auto rounded-full mb-6 shadow-lg border-4 border-white" id="userProfilePhoto">
+            <h1 class="text-5xl font-bold mb-4">Titu Nath</h1>
+            <p class="text-2xl font-light mb-2">Final Year Mechanical Engineering Student</p>
+            <p class="text-xl font-light mb-4">Khulna University of Engineering & Technology (KUET), Bangladesh</p>
+            <p class="text-md font-light mb-8">
+                Sector Co-lead (Aerodynamics, Body & Composite) at Team Kiloflight | Co-Ordinator at KRIOTIC | CEO of LOOP | President of KUETPS
+            </p>
+            <p class="text-lg max-w-2xl mx-auto mb-10" id="userInterestsSummary">
+                I am enthusiastic about researching biomechanics, bioengineering, cardiovascular fluid mechanics, hemodynamics, advanced fluid dynamics, aerodynamics, heat-transfer related problems, and composite materials. I am eager to work on collaborative mechanical engineering projects (Like: Control Engineering) to solve complex challenges.
+            </p>
+            <div class="space-x-4">
+                <a href="#projects" class="btn btn-primary">View My Projects</a>
+                <a href="titu_nath_resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+
+        <section id="projects" class="py-16">
+            <h2 class="section-title">My Projects</h2>
+            <p class="text-center text-gray-600 mb-8 -mt-8">Below are some of the projects I've been involved in. (USER: Please update this section with your detailed engineering projects, images, and descriptions.)</p>
+            
+            <div class="text-center mb-12">
+                <button id="getProjectIdeasButton" class="btn btn-gemini text-lg">
+                    ✨ Get Project Ideas
+                </button>
+                <div id="geminiLoadingIndicator" class="mt-4 text-gray-600 hidden">
+                    Generating ideas with Gemini... Please wait.
+                </div>
+                <div id="geminiProjectIdeasContainer" class="mt-6 text-left max-w-2xl mx-auto">
+                    </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <img src="https://placehold.co/600x400/E0E0E0/777777?text=Formula+Student+Project" alt="Formula Student Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Formula Student Car: Fuel & Cooling System</h3>
+                        <p class="text-sm text-gray-600 mb-4">Contributed to the design and development of the fuel, cooling, and lubrication systems for KUET's Formula Student racing car (combustion vehicle) as part of Team KILO FLIGHT.</p>
+                        <p class="text-sm font-medium text-gray-700 mb-1">Technologies Used:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs">CAD Design</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">System Integration</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-xs">Team Collaboration</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">View Details (Coming Soon) &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                     <img src="https://placehold.co/600x400/D0D0D0/666666?text=Project+Image+2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">[Your Project Title 2]</h3>
+                        <p class="text-sm text-gray-600 mb-4">[Detailed description of your project, your role, challenges, and solutions.]</p>
+                         <p class="text-sm font-medium text-gray-700 mb-1">Technologies Used:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs">[Skill/Tool 1]</span>
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">[Skill/Tool 2]</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full text-xs">[Skill/Tool 3]</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">View Details / GitHub &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                     <img src="https://placehold.co/600x400/C0C0C0/555555?text=Project+Image+3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">[Your Project Title 3]</h3>
+                        <p class="text-sm text-gray-600 mb-4">[Detailed description of your project, your role, challenges, and solutions.]</p>
+                         <p class="text-sm font-medium text-gray-700 mb-1">Technologies Used:</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-pink-100 text-pink-700 px-2 py-1 rounded-full text-xs">[Skill/Tool 1]</span>
+                            <span class="bg-teal-100 text-teal-700 px-2 py-1 rounded-full text-xs">[Skill/Tool 2]</span>
+                            <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded-full text-xs">[Skill/Tool 3]</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">View Details / GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <h2 class="section-title">My Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Technical Areas</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600" id="technicalSkillsList">
+                        <li>Biomechanics & Bioengineering</li>
+                        <li>Cardiovascular Fluid Mechanics</li>
+                        <li>Hemodynamics</li>
+                        <li>Advanced Fluid Dynamics (CFD)</li>
+                        <li>Aerodynamics</li>
+                        <li>Heat Transfer</li>
+                        <li>Composite Materials</li>
+                        <li>Control Engineering</li>
+                        <li>CAD Software (SolidWorks, AutoCAD)</li>
+                        <li>FEA Analysis (ANSYS)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Software & Tools</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>MATLAB</li>
+                        <li>Python</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Google Workspace</li>
+                        <li>[Add other relevant software, e.g., LabVIEW, specific CAD/FEA tools]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">General & Soft Skills</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Problem Solving & Critical Thinking</li>
+                        <li>Teamwork & Collaboration</li>
+                        <li>Leadership</li>
+                        <li>Communication (Bangla - Native, English - Professional)</li>
+                        <li>Project Coordination</li>
+                        <li>Event Management & Photography</li>
+                        <li>Adaptability & Quick Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-16">
+            <h2 class="section-title">Experience</h2>
+            <div class="space-y-10">
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">KILO FLIGHT (Team KUET)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Khulna, Bangladesh</p>
+                    <div class="mb-3">
+                        <p class="font-medium text-gray-700">Sector Co-Lead (Aerodynamics, Body & Composite)</p>
+                        <p class="text-xs text-blue-600">June 2024 – Present</p>
+                        <ul class="list-disc list-inside mt-1 text-sm text-gray-600 space-y-1">
+                            <li>Leading design and analysis for aerodynamics and composite structures.</li>
+                            <li>USER: Add more specific responsibilities and achievements.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-medium text-gray-700">Executive Member</p>
+                        <p class="text-xs text-blue-600">August 2022 – June 2024</p>
+                         <ul class="list-disc list-inside mt-1 text-sm text-gray-600 space-y-1">
+                            <li>Contributed to the Fuel, Cooling & Lubrication System for Formula Student Car.</li>
+                            <li>USER: Add more specific responsibilities and achievements.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700">Trainee Member</p>
+                        <p class="text-xs text-blue-600">March 2021 – July 2022</p>
+                        <ul class="list-disc list-inside mt-1 text-sm text-gray-600 space-y-1">
+                            <li>Learned fundamental concepts of vehicle dynamics and team operations.</li>
+                            <li>USER: Add more specific responsibilities and achievements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">KUET Photographic Society (KUETPS)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Khulna, Bangladesh</p>
+                    <div class="mb-3">
+                        <p class="font-medium text-gray-700">President</p>
+                        <p class="text-xs text-blue-600">April 2024 – Present</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-medium text-gray-700">Joint Secretary</p>
+                        <p class="text-xs text-blue-600">April 2023 – March 2024</p>
+                    </div>
+                     <div class="mb-3">
+                        <p class="font-medium text-gray-700">Organizing Secretary</p>
+                        <p class="text-xs text-blue-600">April 2022 – April 2023</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700">Executive</p>
+                        <p class="text-xs text-blue-600">February 2020 – March 2022</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">LOOP (Control Engineering Club)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Khulna, Bangladesh</p>
+                     <div class="mb-3">
+                        <p class="font-medium text-gray-700">Chief Executive Officer (CEO)</p>
+                        <p class="text-xs text-blue-600">February 2024 – Present</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700">Assistant Research and Quality Enhancement Officer</p>
+                        <p class="text-xs text-blue-600">February 2023 – January 2024</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">KRIOTIC (KUET Robotics and IoT Innovation Club)</h3>
+                     <p class="text-sm text-gray-500 mb-3">Khulna, Bangladesh</p>
+                     <div class="mb-3">
+                        <p class="font-medium text-gray-700">Co-ordinator</p>
+                        <p class="text-xs text-blue-600">February 2024 – Present</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700">Junior Executive</p>
+                        <p class="text-xs text-blue-600">February 2023 – January 2024</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Hamko Group</h3>
+                     <p class="text-sm text-gray-500 mb-3">Location (if known, e.g. Dhaka, Bangladesh)</p>
+                     <div>
+                        <p class="font-medium text-gray-700">Intern</p>
+                        <p class="text-xs text-blue-600">July 2023 (1 month)</p>
+                        <ul class="list-disc list-inside mt-1 text-sm text-gray-600 space-y-1">
+                            <li>Gained industry exposure in [mention specific area if known].</li>
+                            <li>USER: Add more specific responsibilities and learnings.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">Other Affiliations</h3>
+                    <div class="mb-3">
+                        <p class="font-medium text-gray-700">Student Affiliate Member, <span class="text-blue-600">Institution of Mechanical Engineers (IMechE)</span></p>
+                        <p class="text-xs text-gray-500">June 2023 – Present</p>
+                    </div>
+                     <div class="mb-3">
+                        <p class="font-medium text-gray-700">Treasurer, <span class="text-blue-600">Dream-Blood Donation Society of KUET</span></p>
+                        <p class="text-xs text-gray-500">February 2023 – Present (Previously Volunteer, Feb 2020 - Jan 2023)</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-700">Vice President, <span class="text-blue-600">Chittagong Association of KUET</span></p>
+                        <p class="text-xs text-gray-500">January 2024 – Present (Previously Cultural & Organizing Secretary roles)</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education" class="py-16 bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <h2 class="section-title">Education</h2>
+            <div class="space-y-8">
+                <div class="flex items-start">
+                     <img src="https://placehold.co/80x80/0052D4/FFFFFF?text=KUET" alt="KUET Logo" class="w-16 h-16 md:w-20 md:h-20 mr-6 rounded-md object-contain" id="kuetLogo">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Khulna University of Engineering & Technology (KUET)</h3>
+                        <p class="text-blue-600 font-medium">Khulna, Bangladesh</p>
+                        <p class="text-lg text-gray-700 mt-1">Bachelor of Science (B.Sc.) in Mechanical Engineering</p>
+                        <p class="text-gray-600">January 2020 – February 2025 (Expected)</p>
+                        <p class="text-gray-600 mt-2">
+                           Key Areas of Interest: Biomechanics, Bioengineering, Fluid Dynamics, Aerodynamics, Heat Transfer, Composite Materials, Control Engineering.
+                        </p>
+                    </div>
+                </div>
+                 <div>
+                    <h4 class="text-xl font-semibold text-gray-700">Chittagong Engineering University School and College</h4>
+                    <p class="text-gray-600">Higher Secondary Certificate (HSC), Science</p>
+                    <p class="text-sm text-gray-500">July 2017 – December 2019</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-700">Rangunia Khilmogal Rashik High School</h4>
+                    <p class="text-gray-600">Secondary School Certificate (SSC), Science</p>
+                    <p class="text-sm text-gray-500">January 2012 – January 2017</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-16">
+            <h2 class="section-title">Certifications & Awards</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-10">
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Safe Blood Transfusion Training</li>
+                    <li>1st Runner-up at Photography Competition/Exhibition (USER: Please clarify if this was a competition or workshop)</li>
+                    <li>Workshop on CFD (Computational Fluid Dynamics)</li>
+                    <li>Best Volunteer Award (Dream-Blood Donation Society of KUET - 2K19 Batch)</li>
+                    <li>(USER: Add any other relevant certifications or awards)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-lg text-gray-600 mb-6">
+                    I'm always open to discussing new projects, collaborations, or opportunities. Feel free to reach out!
+                </p>
+                <div class="space-y-4">
+                    <p class="text-lg">
+                        <strong class="text-gray-800">Email:</strong>
+                        <a href="mailto:nath1905087@stud.kuet.ac.bd" class="text-blue-600 hover:underline">nath1905087@stud.kuet.ac.bd</a>
+                    </p>
+                     <p class="text-lg">
+                        <strong class="text-gray-800">Phone:</strong>
+                        <a href="tel:+8801836856003" class="text-blue-600 hover:underline">01836856003</a>
+                    </p>
+                    <p class="text-lg">
+                        <strong class="text-gray-800">LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/titu-nath-640516234/" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/titu-nath-640516234</a>
+                    </p>
+                    <p class="text-lg">
+                        <strong class="text-gray-800">GitHub:</strong>
+                        <a href="#" target="_blank" class="text-blue-600 hover:underline" id="githubLink">github.com/yourusername (Add Link)</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 text-center py-8">
+        <p>&copy; <span id="currentYear"></span> Titu Nath. All Rights Reserved.</p>
+        <p>Proudly a student of KUET, Bangladesh.</p>
+    </footer>
+
+    <script>
+        // --- Mobile menu toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a, nav .nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                         hamburgerIcon.classList.remove('hidden');
+                         closeIcon.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // --- Set current year in footer ---
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // --- Gemini API Project Idea Generator ---
+        const getProjectIdeasButton = document.getElementById('getProjectIdeasButton');
+        const ideasContainer = document.getElementById('geminiProjectIdeasContainer');
+        const loadingIndicator = document.getElementById('geminiLoadingIndicator');
+
+        // Function to extract skills and interests for the prompt
+        function getSkillsAndInterestsForPrompt() {
+            let interests = "";
+            const interestsElement = document.getElementById('userInterestsSummary');
+            if (interestsElement) {
+                interests = interestsElement.textContent || "";
+                // A simple extraction - you might want to refine this
+                // For now, let's focus on keywords.
+                interests = interests.replace("I am enthusiastic about researching", "")
+                                   .replace("I am eager to work on collaborative mechanical engineering projects (Like: Control Engineering) to solve complex challenges.", "")
+                                   .trim();
+            }
+
+            let technicalSkills = [];
+            const skillsListElement = document.getElementById('technicalSkillsList');
+            if (skillsListElement) {
+                skillsListElement.querySelectorAll('li').forEach(li => {
+                    technicalSkills.push(li.textContent.trim());
+                });
+            }
+            
+            // Combine and simplify for the prompt
+            let promptKeywords = "My interests include: " + interests + ". My technical skills are: " + technicalSkills.join(", ") + ".";
+            return promptKeywords;
+        }
+
+
+        async function fetchProjectIdeas() {
+            loadingIndicator.classList.remove('hidden');
+            ideasContainer.innerHTML = ''; // Clear previous ideas
+            getProjectIdeasButton.disabled = true;
+
+            const userContext = getSkillsAndInterestsForPrompt();
+            const prompt = `You are an expert mechanical engineering project advisor.
+A final year Mechanical Engineering student has the following interests and skills: ${userContext}
+Please suggest 3 distinct, innovative, and practical project ideas suitable for a final year project or portfolio piece.
+For each idea:
+1. Provide a concise "Project Title:".
+2. Provide a "Description:" (2-3 sentences).
+3. Suggest "Key Technologies/Focus Areas:" (2-3 keywords).
+Format each project idea clearly, perhaps using markdown-like formatting for titles and bolding for subheadings.`;
+
+            let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // API key will be injected by the environment
+            const apiUrl = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=\${apiKey}\`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error("API Error:", errorData);
+                    ideasContainer.innerHTML = \`<p class="text-red-500">Error fetching project ideas. Details: \${errorData?.error?.message || response.statusText}</p>\`;
+                    return;
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    
+                    let rawText = result.candidates[0].content.parts[0].text;
+                    
+                    // Basic parsing and formatting of the text response
+                    // This assumes Gemini returns text where each project is somewhat separated
+                    // and uses "Project Title:", "Description:", "Key Technologies/Focus Areas:"
+                    
+                    const projectEntries = rawText.split(/Project Title:/i).filter(entry => entry.trim() !== "");
+                    let formattedHtml = "<ul>";
+
+                    projectEntries.forEach(entry => {
+                        const titleMatch = entry.match(/(.*?)Description:/is);
+                        const descriptionMatch = entry.match(/Description:(.*?)Key Technologies\/Focus Areas:/is);
+                        const techMatch = entry.match(/Key Technologies\/Focus Areas:(.*?)(Project Title:|$)/is); // Match until next project or end
+
+                        const title = titleMatch ? titleMatch[1].trim() : "Untitled Project";
+                        const description = descriptionMatch ? descriptionMatch[1].trim() : "No description available.";
+                        const technologies = techMatch ? techMatch[1].trim() : "Not specified.";
+
+                        formattedHtml += \`
+                            <li>
+                                <h4>\${title}</h4>
+                                <p><strong>Description:</strong> \${description}</p>
+                                <p><strong>Key Technologies/Focus Areas:</strong> \${technologies}</p>
+                            </li>
+                        \`;
+                    });
+                    formattedHtml += "</ul>";
+                    ideasContainer.innerHTML = formattedHtml;
+
+                } else {
+                    ideasContainer.innerHTML = '<p class="text-gray-500">No project ideas were generated. The response structure might have changed or content is missing.</p>';
+                    console.error("Unexpected API response structure:", result);
+                }
+
+            } catch (error) {
+                console.error('Error fetching project ideas:', error);
+                ideasContainer.innerHTML = \`<p class="text-red-500">An error occurred: \${error.message}. Please check the console for more details.</p>\`;
+            } finally {
+                loadingIndicator.classList.add('hidden');
+                getProjectIdeasButton.disabled = false;
+            }
+        }
+
+        getProjectIdeasButton.addEventListener('click', fetchProjectIdeas);
+
+        // Placeholder for user to update their photo, KUET logo, and GitHub link
+        // document.getElementById('userProfilePhoto').src = 'your_photo_url.jpg';
+        // document.getElementById('kuetLogo').src = 'kuet_logo_url.png';
+        // document.getElementById('githubLink').href = 'https://github.com/yourusername';
+        // document.getElementById('githubLink').textContent = 'github.com/yourusername';
+
+    </script>
+
+</body>
+</html>
